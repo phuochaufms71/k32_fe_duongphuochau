@@ -1,0 +1,48 @@
+@import '../../common/component.scss';
+
+.create-movie {
+    margin: 20px 0 50px;
+    font-size: 20px;
+}
+
+.form-create {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    max-width: 500;
+    margin-top: 10px;
+
+    .input {
+        border: 1px solid #1e4c43;
+        outline: none;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    
+
+    &-submit {
+        background-color: #0ba360;
+        min-width: 100px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        margin-right: 10px;
+    }
+
+    &-cancel {
+        background-color: #ff2946;
+        min-width: 100px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+    }
+}
