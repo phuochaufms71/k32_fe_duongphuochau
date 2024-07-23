@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import { Spin } from "antd";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import './UpdateMovie.scss'
+import './UpdateMovie.scss';
 import { getMovies, updateMovie } from "../../redux/movie/movieSlice";
 import { ACCESS_TOKEN } from "../../constants";
+import Spin from '../../components/components/Spin/Spin';
 
 function UpdateMovie({ setIdSelectedMovie, selectedMovie, setIsUpdateMovie }) {
   const [loading, setLoading] = useState(false);
@@ -32,21 +32,14 @@ function UpdateMovie({ setIdSelectedMovie, selectedMovie, setIsUpdateMovie }) {
       title: '',  
       year: '',
       poster: ''
-    }
-    )
+    })
   }
-  return (
-    <section>
+  return loading ? <Spin /> : (
+    <section className="update-movie">
         <h1 className="title">Update movie</h1>
         <form
           onSubmit={handleUpdateMovie}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 10,
-            width: 500,
-            maxWidth: 500
-          }}
+          className="form-update"
         >
           <input 
             type="text"
@@ -71,16 +64,9 @@ function UpdateMovie({ setIdSelectedMovie, selectedMovie, setIsUpdateMovie }) {
             placeholder="Movie poster"
             className="input"
           />
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: 5,
-            marginTop: 10,
-            width: '100%'
-          }}>
+          <div className="update-action">
             <button type="submit" className="btn btn-submit">
               Update
-              { loading && <Spin size="small" style={{marginLeft: 10}}/>}
             </button>
             <button className="btn btn-cancel" onClick={() => setIsUpdateMovie(false)}>Cancel</button>
           </div>

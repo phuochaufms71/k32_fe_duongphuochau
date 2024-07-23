@@ -32,7 +32,7 @@ function Layout() {
         <>
           <header
             style={{
-              backgroundColor: "#262933",
+              backgroundColor: "#2e6054",
               padding: "30px 20px",
             }}
           >
@@ -45,11 +45,11 @@ function Layout() {
             >
               <Link
                 style={{
-                  color: "#262933",
+                  color: "#2e6054",
                   padding: 10,
                   display: "flex",
                   gap: 10,
-                  fontSize: 20,
+                  fontSize: 18,
                   alignItems: "center",
                   backgroundColor: "#f1ebeb",
                   borderRadius: "4px",
@@ -72,11 +72,11 @@ function Layout() {
                   <>
                     <Link
                       style={{
-                        color: "#262933",
+                        color: "#2e6054",
                         padding: 10,
                         display: "flex",
                         gap: 10,
-                        fontSize: 20,
+                        fontSize: 18,
                         alignItems: "center",
                         backgroundColor: "#f1ebeb",
                         borderRadius: "4px",
@@ -91,11 +91,11 @@ function Layout() {
                 )}
                 <div
                   style={{
-                    color: "#262933",
+                    color: "#2e6054",
                     padding: 10,
                     display: "flex",
                     gap: 10,
-                    fontSize: 20,
+                    fontSize: 18,
                     alignItems: "center",
                     backgroundColor: "#f1ebeb",
                     borderRadius: "4px",
@@ -109,6 +109,7 @@ function Layout() {
                       cursor: "pointer",
                       fontSize: 20,
                       border: "none",
+                      color: '#2e6054',
                       backgroundColor: "transparent",
                     }}
                     className="fa-solid fa-right-from-bracket"
@@ -129,12 +130,7 @@ function Layout() {
       ) : (
         <></>
       )}
-
-      <main
-        style={{
-          padding: 20,
-        }}
-      >
+      <main>
         <Outlet />
       </main>
     </div>

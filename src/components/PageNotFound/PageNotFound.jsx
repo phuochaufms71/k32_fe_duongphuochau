@@ -1,13 +1,8 @@
+import './PageNotFound.scss';
+
 function PageNotFound() {
   return (
-    <div
-      style={{
-        display: 'flex',
-        height: '100vh',
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}
-    >
+    <div className="page-not-found">
         PageNotFound
     </div>
   )

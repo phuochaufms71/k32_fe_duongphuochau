@@ -1,10 +1,10 @@
 @import '../../common/color.scss';
 
 .card-item {
-    border-radius: 5px;
-    background-color: $secondary-color;
-    cursor: pointer;
+    border-radius: 10px;
+    background-color: $primary-color;
     transition: all 0.5s;
+    cursor: pointer;
     overflow: hidden;
 
     &:hover {
@@ -18,7 +18,7 @@
 
     img {
         width: 100%;
-        height: 300px;
+        height: 100%;
         object-fit: cover;
     }
 }

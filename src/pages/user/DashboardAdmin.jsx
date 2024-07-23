@@ -5,7 +5,7 @@ import CreateMovie from "../../components/CreateMovie/CreateMovie";
 import UpdateMovie from "../../components/UpdateMovie/UpdateMovie";
 import './DashboardAdmin.scss';
 import { ACCESS_TOKEN } from "../../constants";
-import { Spin } from "antd";
+import Spin from "../../components/components/Spin/Spin";
 
 function DashboardAdmin() {
   const dispatch = useDispatch();
@@ -22,8 +22,8 @@ function DashboardAdmin() {
   }, [movies, idSelectedMovie])
 
   const handleDeleteMovie = async (movieId) => {
-    if (confirm('Confirm delete movie')) {
-      const accessToken = localStorage.getItem(ACCESS_TOKEN)
+    if (confirm("Delete movie?")) {
+      const accessToken = localStorage.getItem(ACCESS_TOKEN);
       setLoading(true);
       await dispatch(deleteMovie({
         accessToken,
@@ -43,6 +43,7 @@ function DashboardAdmin() {
         flexDirection: 'column',
         gap: 20
       }}
+      className="dashboard"
     >
         <h1>Admin dashboard</h1>
           <button
@@ -89,11 +90,11 @@ function DashboardAdmin() {
                         }}
                       >Edit</button>
                       <button className="btn btn-delete" onClick={() => {
-                        handleDeleteMovie(_id)
                         setIdSelectedMovie(_id)
+                        handleDeleteMovie(_id)
                         }}>
                         Delete
-                        { loading && idSelectedMovie === _id && <Spin size="small" style={{ marginLeft: 10}} />}
+                        { loading && idSelectedMovie === _id && <Spin />}
                       </button>
                     </p>
                   </div>

@@ -1,15 +1,58 @@
 @import '../../common/component.scss';
+@import '../../common/color.scss';
+
+.update-movie {
+    margin: 20px 0 50px;
+    font-size: 20px;
+}
+
+.form-update {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    max-width: 500;
+    margin-top: 10px;
+
+    .input {
+        border: 1px solid $primary-color;
+        outline: none;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+        color: $secondary-color;
+    }
+}
+
+.update-action {
+    display: flex;
+    justify-content: center;
+    gap: 10;
+    margin-top: 5;
+    width: 100%;
+}
 
 .btn {
     padding: 10px;
     border-radius: 4px;
     color: #fff;
+    cursor: pointer;
+    
 
     &-submit {
-        background-color: green;
+        background-color: #0ba360;
+        min-width: 100px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        margin-right: 10px;
+    }
 
-        &-cancel {
-            background-color: red;
-        }
+    &-cancel {
+        background-color: #ff2946;
+        min-width: 100px;
+        font-size: 16px;
+        border: none;
+        outline: none;
     }
 }

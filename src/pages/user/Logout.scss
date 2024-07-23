@@ -18,10 +18,11 @@
 
 .logout-title {
     font-size: 24px;
+    text-align: center;
 }
 
 .logout-sure {
-    margin: 10px 0;
+    margin: 20px 0;
     text-align: center;
     font-size: 18px;
     font-weight: 600;
@@ -31,12 +32,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px 0 5px;
+    margin: 50px 0 5px;
     gap: 20px;
 }
 
 .logout-btn, .logout-cancel {
-    color: #fff;
     border-radius: 4px;
     min-width: 150px;
     padding: 10px;
@@ -48,9 +48,16 @@
 }
 
 .logout-btn {
+    color: #fff;
     background-color: #1e4c43;
+
+    &:hover {
+        opacity: 0.9;
+    }
 }
 
 .logout-cancel {
-    background-color: rgb(223, 86, 86);
+    background-color: transparent;
+    color: #1e4c43;
+    border: 1px solid #1e4c43;
 }

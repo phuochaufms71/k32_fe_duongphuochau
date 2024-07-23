@@ -3,7 +3,8 @@ import { getMovies, getMoviesFromStore} from "../../redux/movie/movieSlice";
 import { ACCESS_TOKEN } from "../../constants";
 import { useEffect } from "react";
 import MovieListing from "../../components/MovieListing/MovieListing";
-import { Spin } from "antd";
+import Spin from "../../components/components/Spin/Spin";
+import './HomePage.scss';
 
 function HomePage() {
   const dispatch = useDispatch();
@@ -22,8 +23,8 @@ function HomePage() {
   }, [localStorage.getItem(ACCESS_TOKEN)])
 
   return (
-    <section>
-      <h1 className="title">Movies</h1>
+    <section className="home">
+      <h1 className="title">All Movies</h1>
       {
         movies?.length === 0 ? 
         <div
@@ -34,7 +35,7 @@ function HomePage() {
             alignItems:'center',
             justifyContent: 'center'
           }}
-        ><Spin size='large' /></div> : (<MovieListing movies={movies} />)
+        ><Spin /></div> : (<MovieListing movies={movies} />)
       }
     </section>
   )

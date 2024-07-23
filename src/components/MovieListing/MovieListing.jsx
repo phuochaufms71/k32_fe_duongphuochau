@@ -2,7 +2,6 @@
 import MovieCard from "../MovieCard/MovieCard";
 import './MovieListing.scss';
 
-
 function MovieListing({ movies }) {
   return (
     <div className="movies-list">

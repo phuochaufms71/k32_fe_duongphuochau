@@ -4,7 +4,8 @@ import { getMovieDetail, getMovieFromStore, removeSelectedMovie } from "../../re
 import { ACCESS_TOKEN } from "../../constants";
 import { useEffect } from "react";
 import MovieDetail from "../../components/MovieDetail/MovieDetail";
-import { Spin } from "antd";
+import  Spin  from '../../components/components/Spin/Spin';
+import './MovieDetailPage.scss'
 
 function MovieDetailPage() {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ function MovieDetailPage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [localStorage.getItem(ACCESS_TOKEN), id])
   return (
-    <section>
+    <section className="detail">
         <h1>MovieDetailPage</h1>
         {
         Object.keys(movie).length === 0 ? 
@@ -39,7 +40,7 @@ function MovieDetailPage() {
             justifyContent: 'center'
           }}
         >
-          <Spin size='large' />
+          <Spin />
         </div> : (<MovieDetail movie={movie} />)
       }
     </section>
